@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "api"
+version = "0.1.0"
+description = ""
+authors = ["hoangthemanhzin <toan6111975@gmail.com>"]
+readme = "README.md"
+packages = [{include = "api", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+quart = "^0.18.3"
+
+[tool.poetry.scripts]
+start = "api:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
