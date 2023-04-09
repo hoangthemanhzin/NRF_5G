@@ -1,8 +1,12 @@
 #from Services import environment
+from ..Database.database import free5gc_db
+from pymongo import MongoClient
+
+client = MongoClient("mongodb://localhost:27017/")
 
 # Test nfprofile_collection
-nfprofile_collection = "";
-
+nfprofile_collection = free5gc_db.NfProfile;
+#nfprofile_collection = client.free5gc.NfProfile;
 # Function get nf instance
 
 def get_nf_instance(nfInstanceId):

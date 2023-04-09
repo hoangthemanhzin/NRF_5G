@@ -1,7 +1,5 @@
-from quart import Quart, request, jsonify, render_template
-
-
-
+from quart import Quart, request, jsonify
+#from 
 from api.Service import nf_instance
 
 app = Quart(__name__)
@@ -11,9 +9,9 @@ app = Quart(__name__)
 
 @app.route('/')
 async def hello():
-    return await render_template("index.html")
+    return "hello"
 
-@app.post("/test")
+@app.get("/test")
 async def test():
     data = await request.get_json()
     return {"input": data, "extra": True}

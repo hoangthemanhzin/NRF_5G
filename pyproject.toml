@@ -9,6 +9,7 @@ packages = [{include = "api", from = "src"}]
 [tool.poetry.dependencies]
 python = "^3.8"
 quart = "^0.18.3"
+pymongo = "^4.3.3"
 
 [tool.poetry.scripts]
 start = "api:run"
