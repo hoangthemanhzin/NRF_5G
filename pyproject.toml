@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "api"
+name = "src"
 version = "0.1.0"
 description = ""
 authors = ["hoangthemanhzin <toan6111975@gmail.com>"]
 readme = "README.md"
-packages = [{include = "api", from = "src"}]
+packages = [{include = "__init__.py", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
@@ -12,7 +12,7 @@ quart = "^0.18.3"
 pymongo = "^4.3.3"
 
 [tool.poetry.scripts]
-start = "api:run"
+start = "src:run"
 
 [build-system]
 requires = ["poetry-core"]

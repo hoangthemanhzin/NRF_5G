@@ -1,8 +1,9 @@
-from quart import Quart, request, jsonify
-#from 
-from api.Service import nf_instance
+#from quart import Quart, request, jsonifyfrom 
+from quart  import jsonify
+from src import app, request
+from src.Service import nf_instance
 
-app = Quart(__name__)
+#app = Quart(__name__)
 #mk : 123456
 
 #test : 
@@ -35,5 +36,5 @@ async def nf_read(nfInstanceId):
     return "Khong lay dc du lieu"
 
 
-def run() -> None:
-    app.run()
+#def run() -> None:
+#    app.run()
